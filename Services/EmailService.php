@@ -578,14 +578,12 @@ class EmailService
 
         foreach ($headers as $name => $value) {
             if (is_array($value)) {
-                if (empty($value['messageId'])) {
-                    continue;
-                }
-
-                $value = $value['messageId'];
+                $value = !empty($value['messageId']) ? $value['messageId'] : null;
             }
-
-            $emailHeaders->addTextHeader($name, $value);
+		
+            if (!empty($name) && !empty($value)) {
+                $emailHeaders->addTextHeader($name, $value);
+            }
         }
 
         // Send email
