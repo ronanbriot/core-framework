@@ -823,19 +823,6 @@ class TicketService
 
     public function massXhrUpdate(Request $request)
     {
-        $permissionMessages = [
-            'trashed' => ['permission' => 'ROLE_AGENT_DELETE_TICKET', 'message' => $this->translator->trans('Success ! Tickets moved to trashed successfully.')],
-            'delete' => ['permission' =>  'ROLE_AGENT_DELETE_TICKET', 'message' => $this->translator->trans('Success ! Tickets removed successfully.')],
-            'restored' => ['permission' =>  'ROLE_AGENT_RESTORE_TICKET', 'message' => $this->translator->trans('Success ! Tickets restored successfully.')],
-            'agent' => ['permission' =>  'ROLE_AGENT_ASSIGN_TICKET', 'message' => $this->translator->trans('Success ! Agent assigned successfully.')],
-            'status' => ['permission' =>  'ROLE_AGENT_UPDATE_TICKET_STATUS', 'message' => $this->translator->trans('Success ! Tickets status updated successfully.')],
-            'type' => ['permission' =>  'ROLE_AGENT_ASSIGN_TICKET_TYPE', 'message' => $this->translator->trans('Success ! Tickets type updated successfully.')],
-            'group' => ['permission' =>  'ROLE_AGENT_ASSIGN_TICKET_GROUP', 'message' => $this->translator->trans('Success ! Tickets group updated successfully.')],
-            'team' => ['permission' =>  'ROLE_AGENT_ASSIGN_TICKET_GROUP', 'message' => $this->translator->trans('Success ! Tickets team updated successfully.')],
-            'priority' => ['permission' =>  'ROLE_AGENT_UPDATE_TICKET_PRIORITY', 'message' => $this->translator->trans('Success ! Tickets priority updated successfully.')],
-            'label' => ['permission' =>  '', 'message' => $this->translator->trans('Success ! Tickets added to label successfully.')]
-        ];
-
         $params = $request->request->get('data');
         $responseMessage = 'Tickets details have been updated successfully';
 
@@ -849,7 +836,6 @@ class TicketService
             if (empty($ticket)) {
                 continue;
             }
-
 
             switch ($params['actionType']) {
                 case 'trashed':
@@ -866,6 +852,7 @@ class TicketService
 
                     $this->container->get('event_dispatcher')->dispatch($event, 'uvdesk.automation.workflow.execute');
                     $responseMessage = "Success ! Tickets moved to trashed successfully.";
+
                     break;
                 case 'delete':
 
@@ -889,8 +876,8 @@ class TicketService
 
                         $this->entityManager->persist($ticket);
                         $responseMessage = "Success ! Tickets restored successfully.";
-                        
                     }
+
                     break;
                 case 'agent':
                     if ($ticket->getAgent() == null || $ticket->getAgent() && $ticket->getAgent()->getId() != $params['targetId']) {
@@ -906,9 +893,9 @@ class TicketService
                         ]);
     
                         $this->container->get('event_dispatcher')->dispatch($event, 'uvdesk.automation.workflow.execute');
-
                         $responseMessage = "Success ! Agent assigned successfully.";
                     }
+
                     break;
                 case 'status':
                     if ($ticket->getStatus() == null || $ticket->getStatus() && $ticket->getStatus()->getId() != $params['targetId']) {
@@ -1018,12 +1005,10 @@ class TicketService
 
         $this->entityManager->flush();
 
-        return[
+        return [
             'alertClass' => 'success',
             'alertMessage' => $this->translator->trans($responseMessage),
         ];
-
-
     }
     
     public function getNotePlaceholderValues($ticket, $type = "customer")
