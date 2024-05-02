@@ -347,27 +347,15 @@
 					'user_form[firstName]': [{
                         required: true,
                         msg: '{{ "This field is mandatory" | trans}}'
-                    }, {
-                        pattern: /^[A-Za-z][A-Za-z]*[\sA-Za-z]*$/,
-                        msg: '{{ "This field must have characters only" | trans}}'
-                    },{
-                        maxLength:40,
-                        msg: '{{ "Maximum character length is 40" | trans}}'
                     }],
                     'user_form[lastName]': [{
                         required: true,
                         msg: '{{ "This field is mandatory" | trans}}'
-                    }, {
-                        pattern: /^[A-Za-z][A-Za-z]*[\sA-Za-z]*$/,
-                        msg: '{{ "This field must have characters only" | trans}}'
-                    },{
-                        maxLength:40,
-                        msg: '{{ "Maximum character length is 40" | trans}}'
                     }],
                     'user_form[email]': [{
                         required: true,
                         msg: '{{ "This field is mandatory" | trans}}'
-                    },{
+                    }, {
                         pattern:  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
                         msg: '{{ "This is not a valid email address" | trans}}'
                     }],
@@ -453,12 +441,12 @@
 				formChanegd: function(e) {
 			    	var fieldName = Backbone.$(e.currentTarget).attr('name');
                     $(".uv-tabs li.uv-tab-active").removeClass('uv-tab-error')
-                    if(fieldName == 'user_form[password][second]') {
-                        if($("input[name='user_form[password][first]']").val().length) {
+                    if (fieldName == 'user_form[password][second]') {
+                        if ($("input[name='user_form[password][first]']").val().length) {
                             this.model.set(fieldName, Backbone.$(e.currentTarget).val())
                             this.model.isValid([fieldName])
                         } else {
-                            if($("input[name='user_form[password][second]']").val().length) {
+                            if ($("input[name='user_form[password][second]']").val().length) {
 		    			        this.model.set(fieldName, Backbone.$(e.currentTarget).val())
                                 this.model.isValid([fieldName])
                             } else {
@@ -468,7 +456,7 @@
                     } else {
                         this.model.set(fieldName, Backbone.$(e.currentTarget).val())
                         this.model.isValid([fieldName])
-                        if(fieldName == 'user_form[password][first]' && !$("input[name='user_form[password][second]']").val().length) {
+                        if (fieldName == 'user_form[password][first]' && !$("input[name='user_form[password][second]']").val().length) {
 		    			    Backbone.Validation.callbacks.valid(this, 'user_form[password][second]', 'input');
                         }
                     }
@@ -479,8 +467,8 @@
                     this.model.unset('user_form[groups][]', { silent: true });
                     this.model.unset('user_form[agentPrivilege][]', { silent: true });
 			        this.model.set(this.$el.serializeObject());
-			        if(this.model.isValid(true)) {
-                        if($("#user_form_role").val() == 'ROLE_ADMIN') {
+			        if (this.model.isValid(true)) {
+                        if ($("#user_form_role").val() == 'ROLE_ADMIN') {
                             $('input[name="user_form[agentPrivilege][]"]').remove();
                             this.model.unset('user_form[agentPrivilege][]', { silent: true });
                         }

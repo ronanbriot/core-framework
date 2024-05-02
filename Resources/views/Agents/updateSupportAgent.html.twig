@@ -395,24 +395,11 @@
 					'user_form[firstName]': [{
                         required: true,
                         msg: '{{ "This field is mandatory" | trans}}'
-                    },{
-                        pattern: /^[A-Za-z][A-Za-z]*[\sA-Za-z]*$/,
-                        msg: '{{ "This field must have characters only" | trans}}'
-                    },{
-                        maxLength:40,
-                        msg: '{{ "Maximum character length is 40" | trans}}'
                     }],
-                    'user_form[lastName]': function(value) {
-                        if(value != undefined && value !== '') {
-                            [{
-                                pattern: /^[A-Za-z][A-Za-z]*[\sA-Za-z]*$/,
-                                msg: '{{ "This field must have characters only" | trans}}'
-                            },{
-                                maxLength:40,
-                                msg: '{{ "Maximum character length is 40" | trans}}'
-                            }]
-                        }
-                    },
+                    'user_form[lastName]': [{
+                        required: true,
+                        msg: '{{ "This field is mandatory" | trans}}'
+                    }],
                     'user_form[email]': [{
                         required: true,
                         msg: '{{ "This field is mandatory"|trans }}'
@@ -478,7 +465,7 @@
 					Backbone.Validation.bind(this);
 					var jsonContext = JSON.parse('{{ errors|raw }}');
 		    		for (var field in jsonContext) {
-                        if(field == 'first') {
+                        if (field == 'first') {
                             Backbone.Validation.callbacks.invalid(this, "user_form[password][" + field + "]", jsonContext[field], 'input');
                         } else {
 		    			    Backbone.Validation.callbacks.invalid(this, "user_form[" + field + "]", jsonContext[field], 'input');
@@ -487,9 +474,9 @@
                     {% if not user.id %}
                         /* guess timezone and select that one */
                         var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone == 'Asia/Calcutta' ? 'Asia/Kolkata' : Intl.DateTimeFormat().resolvedOptions().timeZone;
-                        if(timezone) {
+                        if (timezone) {
                             var option = $('select[name="user_form[timezone]"]').find('option[value="'+ timezone +'"]');
-                            if(option.length) {
+                            if (option.length) {
                                 option.prop('selected', true);
                             }
                         }
@@ -548,7 +535,7 @@
                     }
 				},
                 roleChanged: function(e) {
-                    if($(e.target).val() == 'ROLE_AGENT') {
+                    if ($(e.target).val() == 'ROLE_AGENT') {
 		            	$('.role-dependent-fields').show();
 		            } else {
 		            	$('.role-dependent-fields').hide();
