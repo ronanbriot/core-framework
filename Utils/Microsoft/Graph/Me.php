@@ -104,7 +104,7 @@ class Me
 
     public static function message($id, $accessToken)
     {
-    	$endpoint = self::BASE_ENDPOINT . "/messages/$id";
+    	$endpoint = self::BASE_ENDPOINT . "/messages/".$id."?\$expand=attachments";
 
         $curlHandler = curl_init();
 
