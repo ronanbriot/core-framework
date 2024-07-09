@@ -53,12 +53,12 @@ class TicketService
     protected $userService;
     
     public function __construct(
-        ContainerInterface $container, 
-        RequestStack $requestStack, 
-        EntityManagerInterface $entityManager, 
+        ContainerInterface $container,
+        RequestStack $requestStack,
+        EntityManagerInterface $entityManager,
         FileUploadService $fileUploadService,
-        UserService $userService, 
-        MailboxService $mailboxService, 
+        UserService $userService,
+        MailboxService $mailboxService,
         TranslatorInterface $translator
     ) {
         $this->container = $container;
@@ -338,10 +338,14 @@ class TicketService
         
         $ticket->createdThread = $thread;
 
-        // Uploading Attachments
-        if (!empty($threadData['attachments'])) {
+        // Uploading Attachments.
+        if (
+            ! empty($threadData['attachments']) 
+            || ! empty($threadData['attachmentContent'])
+        ) {
             if ('email' == $threadData['source']) {
-                $this->saveThreadEmailAttachments($thread, $threadData['attachments']);
+                // Saving Email attachments in case of outlook with $threadData['attachmentContent']
+                $this->saveThreadEmailAttachments($thread, $threadData['attachments'], $threadData['attachmentContent']);
             } else if (!empty($threadData['attachments'])) {
                 $this->saveThreadAttachment($thread, $threadData['attachments']);
             }
@@ -400,7 +404,7 @@ class TicketService
         $this->entityManager->flush();
     }
 
-    public function saveThreadEmailAttachments($thread, array $attachments)
+    public function saveThreadEmailAttachments($thread, array $attachments, array $attachmentContents)
     {
         $prefix = 'threads/' . $thread->getId();
         $uploadManager = $this->container->get('uvdesk.core.file_system.service')->getUploadManager();
@@ -421,7 +425,35 @@ class TicketService
             }
         }
 
-        $this->entityManager->flush();
+        // Microsoft 365 Attachments.
+        $prefixOutlook = 'assets/threads/'. $thread->getId(). '/';
+        foreach ($attachmentContents as $attachmentContent) {
+            $decodedData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $attachmentContent['content']));
+            
+            $filePath = $prefixOutlook . $attachmentContent['name'];
+
+            if (! is_dir($prefixOutlook)) {
+                mkdir($prefixOutlook, 0755, true);
+            }
+    
+            // Save attachment content to file
+            if (file_put_contents($filePath, $decodedData) === false) {
+                error_log("Error: Failed to save attachment to $filePath");
+            }
+
+            if (! empty($filePath)) {
+                ($threadAttachment = new Attachment())
+                    ->setThread($thread)
+                    ->setName($attachmentContent['name'])
+                    ->setPath($filePath)
+                    ->setSize(23343)
+                    ->setContentType($attachmentContent['mimeType']);
+                
+                $this->entityManager->persist($threadAttachment);
+            }
+
+            $this->entityManager->flush();
+        }
     }
 
     public function getTypes()
@@ -824,7 +856,6 @@ class TicketService
     public function massXhrUpdate(Request $request)
     {
         $params = $request->request->get('data');
-        $responseMessage = 'Tickets details have been updated successfully';
 
         foreach ($params['ids'] as $ticketId) {
             $ticket = $this->entityManager->getRepository(Ticket::class)->find($ticketId);
@@ -851,7 +882,6 @@ class TicketService
                     ]);
 
                     $this->container->get('event_dispatcher')->dispatch($event, 'uvdesk.automation.workflow.execute');
-                    $responseMessage = "Success ! Tickets moved to trashed successfully.";
 
                     break;
                 case 'delete':
@@ -868,7 +898,7 @@ class TicketService
 
                     $this->entityManager->remove($ticket);
                     $responseMessage = "Success ! Tickets removed successfully.";
-                    
+
                     break;
                 case 'restored':
                     if (true == $ticket->getIsTrashed()) {
@@ -877,7 +907,6 @@ class TicketService
                         $this->entityManager->persist($ticket);
                         $responseMessage = "Success ! Tickets restored successfully.";
                     }
-
                     break;
                 case 'agent':
                     if ($ticket->getAgent() == null || $ticket->getAgent() && $ticket->getAgent()->getId() != $params['targetId']) {
@@ -895,7 +924,6 @@ class TicketService
                         $this->container->get('event_dispatcher')->dispatch($event, 'uvdesk.automation.workflow.execute');
                         $responseMessage = "Success ! Agent assigned successfully.";
                     }
-
                     break;
                 case 'status':
                     if ($ticket->getStatus() == null || $ticket->getStatus() && $ticket->getStatus()->getId() != $params['targetId']) {
