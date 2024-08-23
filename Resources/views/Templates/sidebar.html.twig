@@ -71,7 +71,7 @@
 	<div style="overflow: hidden;">
 		<div class="uv-soft-top">
 			<a href="{{ path('helpdesk_member_dashboard') }}" class="uv-logo">
-				<img src="https://updates.uvdesk.com/uvdesk-logo.png" alt="Logo" width="123" height="48">
+				<img src="" alt="Logo" width="123" height="48">
 			</a>
 
 			<span class="uv-hamburger">
@@ -125,3 +125,18 @@
 		</li>
 	</ul>
 </div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('{{ path("uvdesk_community_tracker_cache_image") }}')
+            .then(response => response.json())
+            .then(data => {
+                const logoImg = document.querySelector('.uv-logo img');
+                if (logoImg) {
+                    // Set the image source to the URL provided by the server
+                    logoImg.src = data;
+                }
+            })
+            .catch(error => console.error('Error fetching the image path:', error));
+    });
+</script>
