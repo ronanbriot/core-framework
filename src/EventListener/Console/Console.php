@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\EventListener\Console;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\EventListener\Console;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Mailbox;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Mailbox;
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 use Symfony\Component\DependencyInjection\ContainerInterface;

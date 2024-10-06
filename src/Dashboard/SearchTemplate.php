@@ -1,11 +1,11 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Dashboard;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard;
 
 use Twig\Environment as TwigEnvironment;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 

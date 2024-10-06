@@ -22,7 +22,7 @@ parameters:
 uvdesk:
     site_url: '{{ SITE_URL }}'
     upload_manager:
-        id: Webkul\UVDesk\CoreFrameworkBundle\FileSystem\UploadManagers\Localhost
+        id: Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem\UploadManagers\Localhost
     
     support_email:
         id: {{ SUPPORT_EMAIL_ID }}

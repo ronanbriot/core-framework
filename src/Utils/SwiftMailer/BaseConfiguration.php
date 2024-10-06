@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Utils\SwiftMailer;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Utils\SwiftMailer;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Utils\TokenGenerator;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Utils\TokenGenerator;
 
 abstract class BaseConfiguration
 {

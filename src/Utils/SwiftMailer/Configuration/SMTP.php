@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Utils\SwiftMailer\Configuration;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Utils\SwiftMailer\Configuration;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Utils\SwiftMailer\BaseConfiguration;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Utils\SwiftMailer\BaseConfiguration;
 
 class SMTP extends BaseConfiguration
 {

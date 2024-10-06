@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events\Agent;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events\Agent;
 
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\AgentActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\AgentActivity;
 
 // @TODO: Deprecate this workflow event, instead use Events\User\ForgotPassword.
 class ForgotPassword extends AgentActivity

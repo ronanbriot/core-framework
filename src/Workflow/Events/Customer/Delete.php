@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events\Customer;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events\Customer;
 
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\CustomerActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\CustomerActivity;
 
 class Delete extends CustomerActivity
 {

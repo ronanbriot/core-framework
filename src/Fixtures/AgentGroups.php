@@ -1,11 +1,11 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Fixtures;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Fixtures;
 
 use Doctrine\Persistence\ObjectManager;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreEntities;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreEntities;
 use Doctrine\Bundle\FixturesBundle\Fixture as DoctrineFixture;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;
 
 class AgentGroups extends DoctrineFixture
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Webkul\UVDesk\CoreFrameworkBundle\Form;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\HttpFoundation\Request;
@@ -56,7 +56,7 @@ class UserProfile extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Webkul\UVDesk\CoreFrameworkBundle\Entity\User',
+            'data_class' => 'Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User',
             'cascade_validation' => true,
             'allow_extra_fields' => true,
             'csrf_protection' => false,

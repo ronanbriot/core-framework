@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\TicketService;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\TicketService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
 
 class ThreadXHR extends AbstractController
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\EventListener\Doctrine;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\EventListener\Doctrine;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreEntities;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreEntities;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class Lifecycle

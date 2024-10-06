@@ -1,23 +1,23 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-use Webkul\UVDesk\CoreFrameworkBundle\Definition\RouterInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Definition\RoutingResourceInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Definition\RouterInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Definition\RoutingResourceInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Tickets\WidgetInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Tickets\QuickActionButtonInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Tickets\WidgetInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Tickets\QuickActionButtonInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
 
 class CoreFramework extends Extension
 {

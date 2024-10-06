@@ -1,36 +1,36 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\EventDispatcher\GenericEvent;
-use Webkul\UVDesk\CoreFrameworkBundle\Form as CoreFrameworkBundleForms;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Form as CoreFrameworkBundleForms;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreFrameworkBundleEntities;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreFrameworkBundleEntities;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\DataProxies as CoreFrameworkBundleDataProxies;
-use Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
-use Webkul\UVDesk\CoreFrameworkBundle\Tickets\QuickActionButtonCollection;
-use Webkul\UVDesk\CoreFrameworkBundle\Repository\TicketRepository;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\DataProxies as CoreFrameworkBundleDataProxies;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Tickets\QuickActionButtonCollection;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Repository\TicketRepository;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UVDeskService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\TicketService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\EmailService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UVDeskService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\TicketService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\EmailService;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Attachment;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Thread;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket as CoreBundleTicket;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Tag;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketPriority;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketStatus;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Attachment;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Thread;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket as CoreBundleTicket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Tag;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketPriority;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketStatus;
 
 class Ticket extends AbstractController
 {

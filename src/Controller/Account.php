@@ -1,27 +1,27 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Recaptcha;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Recaptcha;
 use Symfony\Component\EventDispatcher\GenericEvent;
-use Webkul\UVDesk\CoreFrameworkBundle\Form\UserAccount;
-use Webkul\UVDesk\CoreFrameworkBundle\Form\UserProfile;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Form\UserAccount;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Form\UserProfile;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UVDeskService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\FileUploadService;
-use Webkul\UVDesk\CoreFrameworkBundle\FileSystem\FileSystem;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UVDeskService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\FileUploadService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem\FileSystem;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Filesystem\Filesystem as Fileservice;

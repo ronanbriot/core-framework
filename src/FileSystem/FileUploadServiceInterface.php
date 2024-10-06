@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\FileSystem;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem;
 
 use PhpMimeMailParser\Attachment;
 use Symfony\Component\HttpFoundation\File\UploadedFile;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\EventListener;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\EventListener;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\SwiftMailer\Event\ConfigurationRemovedEvent;
-use Webkul\UVDesk\CoreFrameworkBundle\SwiftMailer\Event\ConfigurationUpdatedEvent;
+use Webkul\Ronanbriot\CoreFrameworkBundle\SwiftMailer\Event\ConfigurationRemovedEvent;
+use Webkul\Ronanbriot\CoreFrameworkBundle\SwiftMailer\Event\ConfigurationUpdatedEvent;
 
 class Swiftmailer
 {

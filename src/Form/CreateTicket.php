@@ -1,17 +1,17 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Form;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Form;
 
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Webkul\UVDesk\CoreFrameworkBundle\DataProxies\CreateTicketDataClass;
+use Webkul\Ronanbriot\CoreFrameworkBundle\DataProxies\CreateTicketDataClass;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class CreateTicket extends AbstractType

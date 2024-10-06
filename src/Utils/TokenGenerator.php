@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Utils;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Utils;
 
 /**
  * Generates a unique random string that can be used be as token as well.

@@ -1,26 +1,26 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Entity;
-use Webkul\UVDesk\CoreFrameworkBundle\Form;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Form;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UVDeskService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\ReportService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UVDeskService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\ReportService;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Doctrine\ORM\Query;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketRating;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketRating;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
 
 class Report extends AbstractController
 {

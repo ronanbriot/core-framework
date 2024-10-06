@@ -1,14 +1,14 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Repository;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Repository;
 
 use Doctrine\ORM\Query;
 use Doctrine\Common\Collections\Criteria;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

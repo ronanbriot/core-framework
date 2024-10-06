@@ -1,13 +1,13 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Dashboard;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard;
 
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\StylesheetResourceInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\JavascriptResourceInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\StylesheetResourceInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\JavascriptResourceInterface;
 
 class DashboardTemplate implements ExtendableComponentInterface
 {

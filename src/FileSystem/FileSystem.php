@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\FileSystem;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Attachment;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Attachment;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\FileSystem\UploadManagers\Localhost as DefaultFileUploadManager;
+use Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem\UploadManagers\Localhost as DefaultFileUploadManager;
 
 class FileSystem
 {

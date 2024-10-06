@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Templates\Email\Resources\Agent;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Templates\Email\Resources\Agent;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Templates\Email\UVDeskEmailTemplateInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Templates\Email\UVDeskEmailTemplateInterface;
 
 abstract class TicketAssigned implements UVDeskEmailTemplateInterface
 {

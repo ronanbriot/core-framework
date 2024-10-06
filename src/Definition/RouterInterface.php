@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Definition;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Definition;
 
 interface RouterInterface
 {

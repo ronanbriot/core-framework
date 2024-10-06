@@ -1,19 +1,19 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Providers;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Providers;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\SecurityBundle\Security\FirewallMap;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\ReCaptchaService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\ReCaptchaService;
 
 class UserProvider implements UserProviderInterface
 {

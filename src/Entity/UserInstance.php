@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Entity;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -110,14 +110,14 @@ class UserInstance
     private $userSavedFilters;
 
     /**
-     * @var \Webkul\UVDesk\CoreFrameworkBundle\Entity\User
+     * @var \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User
      * @ORM\ManyToOne(targetEntity="User", inversedBy="userInstance")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $user;
 
     /**
-     * @var \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole
+     * @var \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole
      * @ORM\ManyToOne(targetEntity="SupportRole")
      * @ORM\JoinColumn(name="supportRole_id", referencedColumnName="id", onDelete="CASCADE")
      */
@@ -507,11 +507,11 @@ class UserInstance
     /**
      * Add userSavedReply
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply
      *
      * @return UserInstance
      */
-    public function addUserSavedReply(\Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply)
+    public function addUserSavedReply(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply)
     {
         $this->userSavedReplies[] = $userSavedReply;
 
@@ -521,9 +521,9 @@ class UserInstance
     /**
      * Remove userSavedReply
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply
      */
-    public function removeUserSavedReply(\Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply)
+    public function removeUserSavedReply(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates $userSavedReply)
     {
         $this->userSavedReplies->removeElement($userSavedReply);
     }
@@ -541,11 +541,11 @@ class UserInstance
     /**
      * Add userSavedFilter
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter
      *
      * @return UserInstance
      */
-    public function addUserSavedFilter(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter)
+    public function addUserSavedFilter(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter)
     {
         $this->userSavedFilters[] = $userSavedFilter;
 
@@ -555,9 +555,9 @@ class UserInstance
     /**
      * Remove userSavedFilter
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter
      */
-    public function removeUserSavedFilter(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter)
+    public function removeUserSavedFilter(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedFilters $userSavedFilter)
     {
         $this->userSavedFilters->removeElement($userSavedFilter);
     }
@@ -575,11 +575,11 @@ class UserInstance
     /**
      * Set user
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\User $user
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User $user
      *
      * @return UserInstance
      */
-    public function setUser(\Webkul\UVDesk\CoreFrameworkBundle\Entity\User $user = null)
+    public function setUser(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User $user = null)
     {
         $this->user = $user;
 
@@ -589,7 +589,7 @@ class UserInstance
     /**
      * Get user
      *
-     * @return \Webkul\UVDesk\CoreFrameworkBundle\Entity\User
+     * @return \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User
      */
     public function getUser()
     {
@@ -599,11 +599,11 @@ class UserInstance
     /**
      * Set supportRole
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole $supportRole
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole $supportRole
      *
      * @return UserInstance
      */
-    public function setSupportRole(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole $supportRole = null)
+    public function setSupportRole(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole $supportRole = null)
     {
         $this->supportRole = $supportRole;
 
@@ -613,7 +613,7 @@ class UserInstance
     /**
      * Get supportRole
      *
-     * @return \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole
+     * @return \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole
      */
     public function getSupportRole()
     {
@@ -623,11 +623,11 @@ class UserInstance
     /**
      * Add supportPrivilege
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege
      *
      * @return UserInstance
      */
-    public function addSupportPrivilege(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege)
+    public function addSupportPrivilege(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege)
     {
         $this->supportPrivileges[] = $supportPrivilege;
 
@@ -637,9 +637,9 @@ class UserInstance
     /**
      * Remove supportPrivilege
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege
      */
-    public function removeSupportPrivilege(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege)
+    public function removeSupportPrivilege(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege $supportPrivilege)
     {
         $this->supportPrivileges->removeElement($supportPrivilege);
     }
@@ -657,11 +657,11 @@ class UserInstance
     /**
      * Add supportTeam
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $supportTeam
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $supportTeam
      *
      * @return UserInstance
      */
-    public function addSupportTeam(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $supportTeam)
+    public function addSupportTeam(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $supportTeam)
     {
         $this->supportTeams[] = $supportTeam;
 
@@ -671,9 +671,9 @@ class UserInstance
     /**
      * Remove supportTeam
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $supportTeam
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $supportTeam
      */
-    public function removeSupportTeam(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $supportTeam)
+    public function removeSupportTeam(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $supportTeam)
     {
         $this->supportTeams->removeElement($supportTeam);
     }
@@ -691,11 +691,11 @@ class UserInstance
     /**
      * Add supportGroup
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $supportGroup
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $supportGroup
      *
      * @return UserInstance
      */
-    public function addSupportGroup(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $supportGroup)
+    public function addSupportGroup(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $supportGroup)
     {
         $this->supportGroups[] = $supportGroup;
 
@@ -705,9 +705,9 @@ class UserInstance
     /**
      * Remove supportGroup
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $supportGroup
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $supportGroup
      */
-    public function removeSupportGroup(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $supportGroup)
+    public function removeSupportGroup(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $supportGroup)
     {
         $this->supportGroups->removeElement($supportGroup);
     }
@@ -725,11 +725,11 @@ class UserInstance
     /**
      * Add leadSupportTeam
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam
      *
      * @return UserInstance
      */
-    public function addLeadSupportTeam(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam)
+    public function addLeadSupportTeam(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam)
     {
         $this->leadSupportTeams[] = $leadSupportTeam;
 
@@ -739,9 +739,9 @@ class UserInstance
     /**
      * Remove leadSupportTeam
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam
      */
-    public function removeLeadSupportTeam(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam)
+    public function removeLeadSupportTeam(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam $leadSupportTeam)
     {
         $this->leadSupportTeams->removeElement($leadSupportTeam);
     }
@@ -759,11 +759,11 @@ class UserInstance
     /**
      * Add adminSupportGroup
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup
      *
      * @return UserInstance
      */
-    public function addAdminSupportGroup(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup)
+    public function addAdminSupportGroup(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup)
     {
         $this->adminSupportGroups[] = $adminSupportGroup;
 
@@ -773,9 +773,9 @@ class UserInstance
     /**
      * Remove adminSupportGroup
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup
      */
-    public function removeAdminSupportGroup(\Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup)
+    public function removeAdminSupportGroup(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup $adminSupportGroup)
     {
         $this->adminSupportGroups->removeElement($adminSupportGroup);
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\PreparedResponse\Actions\Ticket;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\PreparedResponse\Actions\Ticket;
 
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\FunctionalGroup;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\FunctionalGroup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType;
 
 class UpdateType extends PreparedResponseAction
 {

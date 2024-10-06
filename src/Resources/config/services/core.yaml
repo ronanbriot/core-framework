@@ -5,36 +5,36 @@ services:
         public: false
     
     # Services
-    Webkul\UVDesk\CoreFrameworkBundle\:
+    Webkul\Ronanbriot\CoreFrameworkBundle\:
         resource: '../../../*'
         exclude: '../../../{DependencyInjection,Entity,Package,Templates,Migrations,Tests,UIComponents/Dashboard/Aside}'
     
-    Webkul\UVDesk\CoreFrameworkBundle\Controller\:
+    Webkul\Ronanbriot\CoreFrameworkBundle\Controller\:
         resource: '../../../Controller/*'
         tags: ['controller.service_arguments']
     
-    Webkul\UVDesk\CoreFrameworkBundle\Providers\UserProvider:
+    Webkul\Ronanbriot\CoreFrameworkBundle\Providers\UserProvider:
         arguments: ['@security.firewall.map']
     
-    Webkul\UVDesk\CoreFrameworkBundle\Fixtures\:
+    Webkul\Ronanbriot\CoreFrameworkBundle\Fixtures\:
         resource: '../../../Fixtures/*'
         tags: ['doctrine.fixture.orm']
     
-    Webkul\UVDesk\CoreFrameworkBundle\Security\TicketVoter:
+    Webkul\Ronanbriot\CoreFrameworkBundle\Security\TicketVoter:
         tags:
             - { name: security.voter }
     
-    Webkul\UVDesk\CoreFrameworkBundle\FileSystem\UploadManagers\:
+    Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem\UploadManagers\:
         public: true
         resource: '../../../FileSystem/UploadManagers/*'
     
-    Webkul\UVDesk\CoreFrameworkBundle\EventListener\Doctrine\Lifecycle:
+    Webkul\Ronanbriot\CoreFrameworkBundle\EventListener\Doctrine\Lifecycle:
         tags:
             - { name: doctrine.event_listener, event: prePersist }
             - { name: doctrine.event_listener, event: preUpdate }
             - { name: doctrine.event_listener, event: postLoad }
     
-    Webkul\UVDesk\CoreFrameworkBundle\EventListener\Console\Console:
+    Webkul\Ronanbriot\CoreFrameworkBundle\EventListener\Console\Console:
         tags:
             - { name: kernel.event_listener, event: console.command }
             - { name: kernel.event_listener, event: console.terminate }

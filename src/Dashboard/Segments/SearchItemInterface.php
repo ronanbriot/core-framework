@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments;
 
 interface SearchItemInterface
 {

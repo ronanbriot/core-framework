@@ -1,10 +1,10 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection\Passes;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection\Passes;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Webkul\UVDesk\CoreFrameworkBundle\Framework\EventDispatcher;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Framework\EventDispatcher;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
 class Events implements CompilerPassInterface

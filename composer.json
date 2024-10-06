@@ -21,7 +21,7 @@
         "uvdesk/support-center-bundle": "Provide your customers with convenience by introducing the Support Center Portal to your UVDesk Community Helpdesk System"
     },
     "autoload": {
-        "psr-4": { "Webkul\\UVDesk\\CoreFrameworkBundle\\": "src/" }
+        "psr-4": { "Webkul\\Ronanbriot\\CoreFrameworkBundle\\": "src/" }
     },
     "minimum-stability": "stable"
 }

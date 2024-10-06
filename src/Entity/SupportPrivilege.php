@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Entity;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * SupportPrivilege
- * @ORM\Entity(repositoryClass="Webkul\UVDesk\CoreFrameworkBundle\Repository\SupportPrivilegeRepository")
+ * @ORM\Entity(repositoryClass="Webkul\Ronanbriot\CoreFrameworkBundle\Repository\SupportPrivilegeRepository")
  * @ORM\HasLifecycleCallbacks
  * @ORM\Table(name="uv_support_privilege")
  */
@@ -167,11 +167,11 @@ class SupportPrivilege
     /**
      * Add user
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user
      *
      * @return SupportPrivilege
      */
-    public function addUser(\Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user)
+    public function addUser(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user)
     {
         $this->users[] = $user;
 
@@ -181,9 +181,9 @@ class SupportPrivilege
     /**
      * Remove user
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user
      */
-    public function removeUser(\Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user)
+    public function removeUser(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user)
     {
         $this->users->removeElement($user);
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\PreparedResponse\Actions\Agent;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\PreparedResponse\Actions\Agent;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreEntities;
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\FunctionalGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreEntities;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\FunctionalGroup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates;
 
 class MailAgent extends PreparedResponseAction
 {

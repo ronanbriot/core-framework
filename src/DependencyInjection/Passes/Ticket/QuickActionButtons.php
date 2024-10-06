@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection\Passes\Ticket;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection\Passes\Ticket;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Tickets\QuickActionButtonInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Tickets\QuickActionButtonCollection;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Tickets\QuickActionButtonInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Tickets\QuickActionButtonCollection;
 
 class QuickActionButtons implements CompilerPassInterface
 {

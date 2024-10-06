@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events\Ticket;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events\Ticket;
 
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\TicketActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\TicketActivity;
 
 class Team extends TicketActivity
 {

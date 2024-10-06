@@ -1,17 +1,17 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedReplies as CoreBundleSavedReplies;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedReplies as CoreBundleSavedReplies;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Form as CoreFrameworkBundleForms;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreFrameworkBundleEntities;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Form as CoreFrameworkBundleForms;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreFrameworkBundleEntities;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

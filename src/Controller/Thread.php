@@ -1,24 +1,24 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Controller;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\EventDispatcher\GenericEvent;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Attachment;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Attachment;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketStatus;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Thread as TicketThread;
-use Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketStatus;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Thread as TicketThread;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UVDeskService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\TicketService;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\EmailService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UVDeskService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\TicketService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\EmailService;
 use Symfony\Component\HttpKernel\KernelInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\FileUploadService;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\FileUploadService;
 
 class Thread extends AbstractController
 {

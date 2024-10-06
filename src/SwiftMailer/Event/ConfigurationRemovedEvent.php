@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\SwiftMailer\Event;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\SwiftMailer\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use Webkul\UVDesk\CoreFrameworkBundle\Utils\SwiftMailer\BaseConfiguration;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Utils\SwiftMailer\BaseConfiguration;
 
 /**
  * The swiftmailer.configuration.removed event is dispatched each time a mailer configuration

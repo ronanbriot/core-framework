@@ -1,15 +1,15 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Services;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Services;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Webkul\UVDesk\CoreFrameworkBundle\Utils\TokenGenerator;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Utils\TokenGenerator;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\SupportCenterBundle\Entity\KnowledgebaseWebsite;
-use Webkul\UVDesk\CoreFrameworkBundle\Services\UserService;
+use Webkul\Ronanbriot\SupportCenterBundle\Entity\KnowledgebaseWebsite;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService;
 
 class UVDeskService
 {

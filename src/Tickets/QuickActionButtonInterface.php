@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Tickets;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Tickets;
 
 interface QuickActionButtonInterface
 {

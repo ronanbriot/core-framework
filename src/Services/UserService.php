@@ -1,29 +1,29 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Services;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Services;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\Collections\Criteria;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\User;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportRole;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportPrivilege;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportGroup;    
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportTeam;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SavedReplies;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Website;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportRole;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportPrivilege;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportGroup;    
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportTeam;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SavedReplies;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Website;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events as CoreWorkflowEvents;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Twig\Environment as TwigEnvironment;
 use Symfony\Component\Filesystem\Filesystem as Fileservice;
-use Webkul\UVDesk\SupportCenterBundle\Entity\KnowledgebaseWebsite;
+use Webkul\Ronanbriot\SupportCenterBundle\Entity\KnowledgebaseWebsite;
 
 class UserService
 {

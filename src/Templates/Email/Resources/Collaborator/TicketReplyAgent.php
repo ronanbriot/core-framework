@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Templates\Email\Resources\Collaborator;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Templates\Email\Resources\Collaborator;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Templates\Email\UVDeskEmailTemplateInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Templates\Email\UVDeskEmailTemplateInterface;
 
 abstract class TicketReplyAgent implements UVDeskEmailTemplateInterface
 {

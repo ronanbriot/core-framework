@@ -6,37 +6,37 @@ services:
     
     # Aliases
     uvdesk.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\UVDeskService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\UVDeskService
     
     user.provider:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Providers\UserProvider
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Providers\UserProvider
 
     user.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\UserService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\UserService
     
     email.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\EmailService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\EmailService
     
     ticket.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\TicketService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\TicketService
     
     recaptcha.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\ReCaptchaService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\ReCaptchaService
 
     report.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\ReportService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\ReportService
 
     validation.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Services\ValidationService
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Services\ValidationService
 
     uvdesk.core.file_system.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\FileSystem\FileSystem
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\FileSystem\FileSystem
     
     swiftmailer.service:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\SwiftMailer\SwiftMailer
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\SwiftMailer\SwiftMailer
     
     uvdesk.core.event_dispatcher:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Framework\EventDispatcher
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Framework\EventDispatcher
     
     uvdesk.extensibles:
-        alias: Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentManager
+        alias: Webkul\Ronanbriot\CoreFrameworkBundle\Framework\ExtendableComponentManager

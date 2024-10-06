@@ -1,14 +1,22 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection\Passes;
-use Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection\CoreFramework;
+use Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection\Passes;
+use Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection\CoreFramework;
 
 class UVDeskCoreFrameworkBundle extends Bundle
 {
+    /**
+     * @inheritDoc
+     */
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
+
     public function getContainerExtension()
     {
         return new CoreFramework();

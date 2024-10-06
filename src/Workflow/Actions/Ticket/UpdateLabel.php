@@ -1,15 +1,15 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Actions\Ticket;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Actions\Ticket;
 
-use Webkul\UVDesk\AutomationBundle\Workflow\FunctionalGroup;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\FunctionalGroup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\SupportLabel;
-use Webkul\UVDesk\AutomationBundle\Workflow\Action as WorkflowAction;
-use Webkul\UVDesk\AutomationBundle\Workflow\Event;
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\AgentActivity;
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\TicketActivity;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\SupportLabel;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Action as WorkflowAction;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Event;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\AgentActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\TicketActivity;
 
 class UpdateLabel extends WorkflowAction
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\PreparedResponse\Actions\Agent;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\PreparedResponse\Actions\Agent;
 
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\FunctionalGroup;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\FunctionalGroup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
+use Webkul\Ronanbriot\AutomationBundle\PreparedResponse\Action as PreparedResponseAction;
 
 class TransferTickets extends PreparedResponseAction
 {

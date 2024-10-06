@@ -1,15 +1,15 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Dashboard;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\StylesheetResourceInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\JavascriptResourceInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\StylesheetResourceInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\JavascriptResourceInterface;
 
 class Dashboard implements ExtendableComponentInterface
 {

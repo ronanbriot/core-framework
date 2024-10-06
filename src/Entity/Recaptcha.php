@@ -1,11 +1,11 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Entity;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="Webkul\UVDesk\CoreFrameworkBundle\Repository\RecaptchaRepository")
+ * @ORM\Entity(repositoryClass="Webkul\Ronanbriot\CoreFrameworkBundle\Repository\RecaptchaRepository")
  */
 class Recaptcha
 {

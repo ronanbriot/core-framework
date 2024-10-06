@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\DataProxies;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\DataProxies;
 
 class CreateTicketDataClass
 {
@@ -25,7 +25,7 @@ class CreateTicketDataClass
     private $reply;
 
     /**
-     * @var \Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType
+     * @var \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType
      */
     private $type;
 
@@ -128,11 +128,11 @@ class CreateTicketDataClass
     /**
      * Set type
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType $type
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType $type
      *
      * @return Ticket
      */
-    public function setType(\Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType $type = null)
+    public function setType(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType $type = null)
     {
         $this->type = $type;
 
@@ -142,7 +142,7 @@ class CreateTicketDataClass
     /**
      * Get type
      *
-     * @return \Webkul\UVDesk\CoreFrameworkBundle\Entity\TicketType
+     * @return \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\TicketType
      */
     public function getType()
     {

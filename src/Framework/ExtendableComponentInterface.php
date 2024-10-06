@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Framework;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Framework;
 
 interface ExtendableComponentInterface
 {

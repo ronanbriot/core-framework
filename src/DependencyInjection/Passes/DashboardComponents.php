@@ -1,20 +1,20 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection\Passes;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\DependencyInjection\Passes;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Dashboard;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\AsideTemplate;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\SearchTemplate;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Dashboard;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\AsideTemplate;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\SearchTemplate;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\SearchItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\NavigationInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionInterface;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItemInterface;
 
 class DashboardComponents implements CompilerPassInterface
 {

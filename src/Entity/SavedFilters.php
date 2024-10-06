@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Entity;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * SavedFilters
- * @ORM\Entity(repositoryClass="Webkul\UVDesk\CoreFrameworkBundle\Repository\SavedRepliesRepository")
+ * @ORM\Entity(repositoryClass="Webkul\Ronanbriot\CoreFrameworkBundle\Repository\SavedRepliesRepository")
  * @ORM\Table(name="uv_saved_filters")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -51,7 +51,7 @@ class SavedFilters
     private $dateUpdated;
 
     /**
-     * @var \Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance
+     * @var \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance
      * 
      * @ORM\ManyToOne(targetEntity="UserInstance", inversedBy="userSavedFilters")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=true, onDelete="CASCADE")
@@ -193,11 +193,11 @@ class SavedFilters
     /**
      * Set user
      *
-     * @param \Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user
+     * @param \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user
      *
      * @return SavedFilters
      */
-    public function setUser(\Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance $user = null)
+    public function setUser(\Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance $user = null)
     {
         $this->user = $user;
 
@@ -207,7 +207,7 @@ class SavedFilters
     /**
      * Get user
      *
-     * @return \Webkul\UVDesk\CoreFrameworkBundle\Entity\UserInstance
+     * @return \Webkul\Ronanbriot\CoreFrameworkBundle\Entity\UserInstance
      */
     public function getUser()
     {

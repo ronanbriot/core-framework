@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments;
 
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\YamlFileLoader;

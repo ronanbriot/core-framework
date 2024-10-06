@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Events\User;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Events\User;
 
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\UserActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\UserActivity;
 
 class ForgotPassword extends UserActivity
 {

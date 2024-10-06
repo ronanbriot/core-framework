@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Fixtures;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Fixtures;
 
 use Doctrine\Persistence\ObjectManager;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreEntities;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreEntities;
 use Doctrine\Bundle\FixturesBundle\Fixture as DoctrineFixture;
-use Webkul\UVDesk\CoreFrameworkBundle\Templates\Email\Resources as CoreEmailTemplates;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates as CoreBundleEmailTemplates;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Templates\Email\Resources as CoreEmailTemplates;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates as CoreBundleEmailTemplates;
 
 class EmailTemplates extends DoctrineFixture
 {

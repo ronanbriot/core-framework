@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Sections;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Sections;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSection;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSection;
 
 class Reports extends HomepageSection
 {

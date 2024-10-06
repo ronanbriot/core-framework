@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Items;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Items;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItem;
-use Webkul\UVDesk\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Sections\Settings;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Dashboard\Segments\HomepageSectionItem;
+use Webkul\Ronanbriot\CoreFrameworkBundle\UIComponents\Dashboard\Homepage\Sections\Settings;
 
 class EmailTemplates extends HomepageSectionItem
 {

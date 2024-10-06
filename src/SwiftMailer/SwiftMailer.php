@@ -1,12 +1,12 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\SwiftMailer;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\SwiftMailer;
 
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Utils\SwiftMailer\Configuration as MailerConfigurations;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Utils\SwiftMailer\Configuration as MailerConfigurations;
 
 class SwiftMailer
 {

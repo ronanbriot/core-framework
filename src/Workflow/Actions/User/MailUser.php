@@ -1,16 +1,16 @@
 <?php
 
-namespace Webkul\UVDesk\CoreFrameworkBundle\Workflow\Actions\User;
+namespace Webkul\Ronanbriot\CoreFrameworkBundle\Workflow\Actions\User;
 
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
-use Webkul\UVDesk\AutomationBundle\Workflow\FunctionalGroup;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\Ticket;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\FunctionalGroup;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity as CoreEntities;
-use Webkul\UVDesk\AutomationBundle\Workflow\Action as WorkflowAction;
-use Webkul\UVDesk\CoreFrameworkBundle\Entity\EmailTemplates;
-use Webkul\UVDesk\AutomationBundle\Workflow\Event;
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\UserActivity;
-use Webkul\UVDesk\AutomationBundle\Workflow\Events\CustomerActivity;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity as CoreEntities;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Action as WorkflowAction;
+use Webkul\Ronanbriot\CoreFrameworkBundle\Entity\EmailTemplates;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Event;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\UserActivity;
+use Webkul\Ronanbriot\AutomationBundle\Workflow\Events\CustomerActivity;
 
 class MailUser extends WorkflowAction
 {
