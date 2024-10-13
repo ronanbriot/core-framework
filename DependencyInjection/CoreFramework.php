@@ -3,6 +3,7 @@
 namespace Webkul\UVDesk\CoreFrameworkBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -21,12 +22,20 @@ use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\PanelSidebarItemInterfa
 
 class CoreFramework extends Extension
 {
-    public function getAlias()
+    const VERSION = 'v1.3.1';
+
+    /**
+     * @return string
+    */
+    public function getAlias(): string
     {
         return 'uvdesk';
     }
 
-    public function getConfiguration(array $configs, ContainerBuilder $container)
+    /**
+     * @return ConfigurationInterface
+    */
+    public function getConfiguration(array $configs, ContainerBuilder $container): ?ConfigurationInterface
     {
         return new BundleConfiguration();
     }
