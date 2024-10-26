@@ -13,6 +13,10 @@ use Webkul\UVDesk\CoreFrameworkBundle\Dashboard\Segments\JavascriptResourceInter
 
 class Dashboard implements ExtendableComponentInterface
 {
+	private $homepageTemplate;
+	private $dashboardTemplate;
+	private $navigationTemplate;
+
 	public function __construct(DashboardTemplate $dashboardTemplate, NavigationTemplate $navigationTemplate, HomepageTemplate $homepageTemplate)
 	{
 		$this->homepageTemplate = $homepageTemplate;

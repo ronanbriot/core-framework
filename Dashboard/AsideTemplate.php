@@ -17,6 +17,9 @@ class AsideTemplate implements ExtendableComponentInterface
 	private $panelSidebars = [];
 	private $panelSidebarItems = [];
 	private $isOrganized = false;
+    private $twig;
+    private $userService;
+    private $requestStack;
 
 	public function __construct(RequestStack $requestStack, TwigEnvironment $twig, UserService $userService)
 	{

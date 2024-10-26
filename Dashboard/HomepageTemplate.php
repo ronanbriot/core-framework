@@ -17,6 +17,9 @@ class HomepageTemplate implements ExtendableComponentInterface
 	private $sections = [];
 	private $sectionItems = [];
 	private $isOrganized = false;
+	private $router;
+	private $userService;
+	private $translator;
 
 	public function __construct(RouterInterface $router, UserService $userService, TranslatorInterface $translator)
 	{

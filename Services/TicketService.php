@@ -50,6 +50,7 @@ class TicketService
     protected $entityManager;
     protected $fileUploadService;
     protected $userService;
+    protected $mailboxService;
     
     public function __construct(
         ContainerInterface $container, 

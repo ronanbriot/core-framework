@@ -16,6 +16,11 @@ class NavigationTemplate implements ExtendableComponentInterface
 	CONST TEMPLATE_ITEM = '<li title = "[[ NAME ]]" class = "[[ ATTRIBUTES ]]" data-toggle = "tooltip" data-placement = "right"><a class="[[ isActive ]]" href="[[ URL ]]"><span class="uv-icon">[[ SVG ]]</span><span class="uv-menu-item">[[ NAME ]]</span></a></li>';
 	
 	private $segments = [];
+	private $router;
+	private $container;
+	private $requestStack;
+	private $userService;
+	private $translator;
 
 	public function __construct(ContainerInterface $container, RequestStack $requestStack, RouterInterface $router, UserService $userService, TranslatorInterface $translator)
 	{

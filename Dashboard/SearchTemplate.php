@@ -12,6 +12,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class SearchTemplate implements ExtendableComponentInterface
 {
     private $collection = [];
+	private $twig;
+	private $translator;
+	private $userService;
 
     public function __construct(TwigEnvironment $twig, TranslatorInterface $translator, UserService $userService)
     {

@@ -10,6 +10,9 @@ use Webkul\UVDesk\CoreFrameworkBundle\Framework\ExtendableComponentInterface;
 class QuickActionButtonCollection implements ExtendableComponentInterface
 {
 	private $collection = [];
+	private $twig;
+	private $dashboard;
+	private $userService;
 	
 	public function __construct(TwigEnvironment $twig, DashboardTemplate $dashboard, UserService $userService)
     {

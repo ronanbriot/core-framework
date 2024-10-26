@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class ExtendableComponentManager
 {
     private $components = [];
+    private $container;
 
 	public function __construct(ContainerInterface $container)
 	{
