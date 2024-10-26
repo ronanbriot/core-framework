@@ -34,7 +34,14 @@ class UserProvider implements UserProviderInterface
         $this->recaptchaService = $recaptchaService;
     }
 
-    public function loadUserByUsername($username)
+    /**
+     * @return UserInterface
+     *
+     * @throws UserNotFoundException
+     *
+     * @deprecated since Symfony 5.3, use loadUserByIdentifier() instead
+     */
+    public function loadUserByUsername($username): UserInterface
     {
         $request = $this->requestStack->getCurrentRequest();
         $recaptchaDetails = $this->recaptchaService->getRecaptchaDetails();
@@ -103,7 +110,20 @@ class UserProvider implements UserProviderInterface
         }
     }
 
-    public function refreshUser(UserInterface $user)
+    /**
+     * Refreshes the user.
+     *
+     * It is up to the implementation to decide if the user data should be
+     * totally reloaded (e.g. from the database), or if the UserInterface
+     * object can just be merged into some internal array of users / identity
+     * map.
+     *
+     * @return UserInterface
+     *
+     * @throws UnsupportedUserException if the user is not supported
+     * @throws UserNotFoundException    if the user is not found
+     */
+    public function refreshUser(UserInterface $user): UserInterface
     {
         
         if ($this->supportsClass(get_class($user))) {
@@ -113,7 +133,12 @@ class UserProvider implements UserProviderInterface
         throw new UnsupportedUserException('Invalid user type');
     }
 
-    public function supportsClass($class)
+    /**
+     * Whether this provider supports the given user class.
+     *
+     * @return bool
+     */
+    public function supportsClass($class): bool
     {
         return User::class === $class;
     }

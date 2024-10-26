@@ -80,9 +80,12 @@ class UserService
     
     public function getSessionUser()
     {
-        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        $token = $this->container->get('security.token_storage')->getToken();
+        if (!is_null($token)) {
+            $user = $token->getUser();
+        }
 
-        return $user instanceof User ? $user : null;
+        return isset($user) && $user instanceof User ? $user : null;
     }
 
     public function getCurrentUser()

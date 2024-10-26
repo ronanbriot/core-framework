@@ -31,8 +31,15 @@ class RouteLoader extends Loader implements RouterInterface
             }
         }
     }
-    
-    public function load($resource, $type = null)
+
+    /**
+     * Loads a resource.
+     *
+     * @param mixed $resource The resource
+     *
+     * @return mixed
+     */
+    public function load($resource, $type = null): mixed
     {
         $collection = new RouteCollection();
 

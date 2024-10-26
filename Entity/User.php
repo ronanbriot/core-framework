@@ -3,6 +3,7 @@
 namespace Webkul\UVDesk\CoreFrameworkBundle\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -11,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\HasLifecycleCallbacks()
  * @ORM\Table(name="uv_user")
  */
-class User implements UserInterface
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     /**
      * @var integer
@@ -505,6 +506,16 @@ class User implements UserInterface
     public function getTimeformat()
     {
         return $this->timeformat;
+    }
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUserIdentifier(): string
+    {
+        return (string) $this->email;
     }
 }
 

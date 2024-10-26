@@ -21,7 +21,13 @@ class TicketVoter extends Voter
         $this->decisionManager = $decisionManager;
     }
 
-    protected function supports($attribute, $subject)
+    /**
+     *
+     * @param mixed $subject
+     *
+     * @return bool
+     */
+    protected function supports($attribute, $subject): bool
     {
         if (!in_array($attribute, [self::MEMBER_VIEW, self::CUSTOMER_VIEW])) {
             return false;
@@ -30,7 +36,11 @@ class TicketVoter extends Voter
         return $subject instanceof \Webkul\UVDesk\CoreFrameworkBundle\Entity\Ticket;
     }
 
-    protected function voteOnAttribute($attribute, $ticket, TokenInterface $token)
+    /**
+     *
+     * @return bool
+     */
+    protected function voteOnAttribute($attribute, $ticket, TokenInterface $token): bool
     {
         $user = $token->getUser();
 
