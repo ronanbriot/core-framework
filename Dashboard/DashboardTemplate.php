@@ -14,6 +14,7 @@ class DashboardTemplate implements ExtendableComponentInterface
     private $scripts = [];
     private $stylesheets = [];
     private $router;
+    private $container;
     private $requestStack;
 
 	public function __construct(ContainerInterface $container, RequestStack $requestStack, RouterInterface $router)
